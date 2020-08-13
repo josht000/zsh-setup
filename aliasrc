@@ -74,15 +74,30 @@ alias unexport='unset'
 
 alias rm='rm -i'
 alias cp='cp -i'
+alias cpr='cp -r'
 alias mv='mv -i'
 alias vim='vim'
 alias vi='vim'
-alias gds-start='sudo systemctl start openvpn-client@gds'
-alias gds-stop='sudo systemctl stop openvpn-client@gds'
+
+# GIT aliases
 gitpush() {
     git add .
     git commit -m "$*"
     git push
 }
 alias gp=gitpush
-alias lbrynet='/opt/LBRY/resources/static/daemon/lbrynet'
+
+# Build Aliases
+alias cnr='cmake -DCMAKE_BUILD_TYPE=Release -G Ninja .. && ninja'
+alias cn='cmake -DCMAKE_BUILD_TYPE=Debug -G Ninja .. && ninja'
+alias cm='cmake -DCMAKE_BUILD_TYPE=Debug .. && make -j6'
+alias m='make -j6'
+alias n='ninja'
+alias resize='gsettings set org.gnome.desktop.interface text-scaling-factor'
+alias clean='rm -rf ../build/*'
+alias login='ssh user1@192.168.1.12'
+alias copy_ws='scp -r /media/ar/Samsung_T5/microatr user1@192.168.1.12:/home/user1/.'
+
+# GPU aliases
+alias smi='nvidia-smi'
+alias gpu_usage='sudo fuser -v /dev/nvidia*'
