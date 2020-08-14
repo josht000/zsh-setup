@@ -9,7 +9,7 @@ trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
 trap 'echo "\"${last_command}\" command filed with exit code $?."' EXIT
 
 mkdir -p "$HOME/.zsh"
-cp .zshrc "$HOME/.zsh/."
+cp .zshrc "$HOME/."
 cp aliasrc "$HOME/.zsh/."
 
 # plugins
