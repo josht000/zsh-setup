@@ -18,4 +18,8 @@ git clone --depth=1  https://github.com/zsh-users/zsh-syntax-highlighting.git "$
 git clone --depth=1  https://github.com/wting/autojump.git "$HOME/.zsh/autojump"
 git clone --depth=1  https://github.com/romkatv/powerlevel10k.git "$HOME/.zsh/powerlevel10k"
 
+# install autojump for current user only without sudo
+cd "$HOME/.zsh/autojump"
+./install.py
+
 touch "$HOME/.cache/zshhistory"
